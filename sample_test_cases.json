@@ -1,0 +1,167 @@
+[
+  {
+    "test_id": 1,
+    "ticket_message": "I want to cancel my order. It is still being processed and hasn't shipped yet.",
+    "order_value_inr": 1500,
+    "days_since_delivery": null,
+    "days_since_dispatch": null,
+    "product_type": "electronics",
+    "opened_status": null,
+    "order_status": "processing",
+    "expected_action": "CANCEL_AND_REFUND"
+  },
+  {
+    "test_id": 2,
+    "ticket_message": "I need to cancel my order urgently. It was shipped 2 days ago.",
+    "order_value_inr": 2200,
+    "days_since_delivery": null,
+    "days_since_dispatch": 2,
+    "product_type": "clothing",
+    "opened_status": null,
+    "order_status": "shipped",
+    "expected_action": "CANNOT_CANCEL_AFTER_DISPATCH"
+  },
+  {
+    "test_id": 3,
+    "ticket_message": "The item arrived completely smashed. The box was torn and the product is broken. I've taken photos of everything.",
+    "order_value_inr": 4500,
+    "days_since_delivery": 1,
+    "days_since_dispatch": null,
+    "product_type": "home_appliance",
+    "opened_status": null,
+    "order_status": "delivered",
+    "expected_action": "APPROVE_REFUND_OR_REPLACEMENT"
+  },
+  {
+    "test_id": 4,
+    "ticket_message": "My package arrived damaged but I haven't taken any photos yet.",
+    "order_value_inr": 3000,
+    "days_since_delivery": 1,
+    "days_since_dispatch": null,
+    "product_type": "electronics",
+    "opened_status": null,
+    "order_status": "delivered",
+    "expected_action": "REQUEST_PHOTOS"
+  },
+  {
+    "test_id": 5,
+    "ticket_message": "I want to return this item. It arrived 5 days ago and I haven't opened the box.",
+    "order_value_inr": 1800,
+    "days_since_delivery": 5,
+    "days_since_dispatch": null,
+    "product_type": "clothing",
+    "opened_status": "unopened",
+    "order_status": "delivered",
+    "expected_action": "APPROVE_RETURN"
+  },
+  {
+    "test_id": 6,
+    "ticket_message": "I want to return this product. I've already opened and used it though.",
+    "order_value_inr": 2500,
+    "days_since_delivery": 4,
+    "days_since_dispatch": null,
+    "product_type": "electronics",
+    "opened_status": "opened",
+    "order_status": "delivered",
+    "expected_action": "REJECT_OPENED_ITEM"
+  },
+  {
+    "test_id": 7,
+    "ticket_message": "I received the wrong item. I ordered a red backpack but received a blue wallet.",
+    "order_value_inr": 1200,
+    "days_since_delivery": 2,
+    "days_since_dispatch": null,
+    "product_type": "accessories",
+    "opened_status": null,
+    "order_status": "delivered",
+    "expected_action": "REPLACE_CORRECT_ITEM"
+  },
+  {
+    "test_id": 8,
+    "ticket_message": "My order was dispatched 3 days ago. When will it arrive?",
+    "order_value_inr": 900,
+    "days_since_delivery": null,
+    "days_since_dispatch": 3,
+    "product_type": "clothing",
+    "opened_status": null,
+    "order_status": "shipped",
+    "expected_action": "WAIT_AND_TRACK"
+  },
+  {
+    "test_id": 9,
+    "ticket_message": "It's been 10 days since my order was shipped and I still haven't received it. The tracking hasn't updated in days.",
+    "order_value_inr": 5500,
+    "days_since_delivery": null,
+    "days_since_dispatch": 10,
+    "product_type": "electronics",
+    "opened_status": null,
+    "order_status": "shipped",
+    "expected_action": "OPEN_SHIPPING_INVESTIGATION"
+  },
+  {
+    "test_id": 10,
+    "ticket_message": "The mixer grinder I received doesn't work. The motor makes noise but the blades don't spin. I have a video of the issue.",
+    "order_value_inr": 3500,
+    "days_since_delivery": 2,
+    "days_since_dispatch": null,
+    "product_type": "home_appliance",
+    "opened_status": null,
+    "order_status": "delivered",
+    "expected_action": "APPROVE_REPLACEMENT"
+  },
+  {
+    "test_id": 11,
+    "ticket_message": "I want to return the milk and bread I ordered online.",
+    "order_value_inr": 250,
+    "days_since_delivery": 1,
+    "days_since_dispatch": null,
+    "product_type": "food",
+    "opened_status": null,
+    "order_status": "delivered",
+    "expected_action": "REJECT_FOOD_RETURN"
+  },
+  {
+    "test_id": 12,
+    "ticket_message": "I want to return a product I bought over a month ago. It was delivered 20 days back.",
+    "order_value_inr": 3800,
+    "days_since_delivery": 20,
+    "days_since_dispatch": null,
+    "product_type": "electronics",
+    "opened_status": "unopened",
+    "order_status": "delivered",
+    "expected_action": "REJECT_OUTSIDE_WINDOW"
+  },
+  {
+    "test_id": 13,
+    "ticket_message": "The laptop I bought 15 days ago keeps crashing. I think it might be defective but I'm not sure what's causing it.",
+    "order_value_inr": 55000,
+    "days_since_delivery": 15,
+    "days_since_dispatch": null,
+    "product_type": "electronics",
+    "opened_status": null,
+    "order_status": "delivered",
+    "expected_action": "REQUEST_DEFECT_EVIDENCE"
+  },
+  {
+    "test_id": 14,
+    "ticket_message": "The washing machine I bought 25 days ago has developed a water leak. I can provide photos and videos.",
+    "order_value_inr": 18000,
+    "days_since_delivery": 25,
+    "days_since_dispatch": null,
+    "product_type": "home_appliance",
+    "opened_status": null,
+    "order_status": "delivered",
+    "expected_action": "OFFER_REPLACEMENT_OR_REFUND"
+  },
+  {
+    "test_id": 15,
+    "ticket_message": "I have an issue with my order.",
+    "order_value_inr": null,
+    "days_since_delivery": null,
+    "days_since_dispatch": null,
+    "product_type": null,
+    "opened_status": null,
+    "order_status": null,
+    "expected_action": "NEEDS_MORE_INFORMATION"
+  }
+]

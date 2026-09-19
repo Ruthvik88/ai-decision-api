@@ -1,0 +1,13 @@
+fastapi==0.115.*
+uvicorn[standard]==0.34.*
+sqlalchemy==2.0.*
+python-jose[cryptography]==3.3.*
+passlib[bcrypt]==1.7.*
+python-dotenv==1.1.*
+google-generativeai==0.8.*
+numpy==2.1.*
+pydantic==2.9.*
+streamlit==1.44.*
+requests==2.32.*
+httpx==0.28.*
+pytest==8.3.*
